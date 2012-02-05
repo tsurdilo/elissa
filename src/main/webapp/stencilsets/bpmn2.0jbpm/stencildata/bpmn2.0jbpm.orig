@@ -53,7 +53,7 @@
 				}
 			]
 		},
-		{
+		/**{
 			"name" : "condition",
 			"properties" : [
 				{
@@ -68,7 +68,7 @@
 					"popular":true
 				}
 			]
-		},
+		},**/
 		{
 			"name":"boundaryevent",
 			"properties":[
@@ -320,12 +320,12 @@
 				},
 				{
 					"id":"vardefs",
-					"type":"Text",
+					"type":"Vardef",
 					"title":"Variable Definitions",
 					"title_de":"Variable Definitions",
 					"value":"",
-					"description":"Comma-separated variable definitions",
-					"description_de":"Durch Komma getrennte Variablendeklarationen",
+					"description":"Variable Definitions",
+					"description_de":"Variablendeklarationen",
 					"readonly":false,
 					"optional":true
 				},
@@ -353,7 +353,7 @@
 				},
 				{
 					"id":"imports",
-					"type":"Text",
+					"type":"Import",
 					"title":"Imports",
 					"title_de":"Imports",
 					"value":"",
@@ -363,7 +363,7 @@
 				},
 				{
 					"id":"globals",
-					"type":"Text",
+					"type":"Global",
 					"title":"Globals",
 					"title_de":"Globals",
 					"value":"",
@@ -405,7 +405,7 @@
 					"optional":true,
 					"length":"50"
 				},**/
-				{
+				/**{
 					"id":"language",
 					"type":"String",
 					"title":"Language",
@@ -417,7 +417,7 @@
 					"readonly":false,
 					"optional":true,
 					"length":"50"
-				},
+				},**/
 				/**{	
 					"id":"namespaces",
 					"type":"Complex",
@@ -2642,8 +2642,9 @@
 							"value":"",
 							"width":100,
 							"optional":false
-						},
-						{
+						}
+						/**,**/
+						/**{
 							"id":"language",
 							"name":"Language",
 							"name_de":"Sprache",
@@ -2651,7 +2652,7 @@
 							"value":"",
 							"width":100,
 							"optional":true
-						}
+						}**/
 					]
 			    },
 			    {
@@ -2758,7 +2759,7 @@
 				},
 				{
 					"id":"onEntryActions",
-					"type":"Text",
+					"type":"Action",
 					"title":"On Entry Actions",
 					"title_de":"On Entry Actions",
 					"value":"",
@@ -2768,7 +2769,7 @@
 				},
 				{
 					"id":"onExitActions",
-					"type":"Text",
+					"type":"Action",
 					"title":"On Exit Actions",
 					"title_de":"On Exit Actions",
 					"value":"",
@@ -2992,7 +2993,7 @@
 					"type":"Text",
 					"title":"DataOutputSet",
 					"title_de":"Datenausgabesatz",
-					"value":"",
+					"value":"$workitemDefs.(k).results:{k1| $k1.name$}; separator=","$",
 					"description":"An OutputSet is a collection of DataOutputs elements that together may be produced as output from an Activity or Event.",
 					"description_de":"Ein Ausgabesatz ist eine Zusammenstellung von Ausgabe-Datenobjekten, die zusammen als Ausgabe einer Aktivität oder eines Ereignisses produziert werden.",
 					"readonly":false,
@@ -3074,7 +3075,7 @@
 				},	
 				{
 					"id":"onEntryActions",
-					"type":"Text",
+					"type":"Action",
 					"title":"On Entry Actions",
 					"title_de":"On Entry Actions",
 					"value":"",
@@ -3084,7 +3085,7 @@
 				},
 				{
 					"id":"onExitActions",
-					"type":"Text",
+					"type":"Action",
 					"title":"On Exit Actions",
 					"title_de":"On Exit Actions",
 					"value":"",
@@ -3243,7 +3244,7 @@
 				},
 				{
 					"id":"onEntryActions",
-					"type":"Text",
+					"type":"Action",
 					"title":"On Entry Actions",
 					"title_de":"On Entry Actions",
 					"value":"",
@@ -3253,7 +3254,7 @@
 				},
 				{
 					"id":"onExitActions",
-					"type":"Text",
+					"type":"Action",
 					"title":"On Exit Actions",
 					"title_de":"On Exit Actions",
 					"value":"",
@@ -3285,7 +3286,7 @@
 				},
 				{
 					"id":"vardefs",
-					"type":"Text",
+					"type":"Vardef",
 					"title":"Variable Definitions",
 					"title_de":"Variable Definitions",
 					"value":"",
@@ -3370,7 +3371,7 @@
 				},	
 				{
 					"id":"onEntryActions",
-					"type":"Text",
+					"type":"Action",
 					"title":"On Entry Actions",
 					"title_de":"On Entry Actions",
 					"value":"",
@@ -3380,7 +3381,7 @@
 				},
 				{
 					"id":"onExitActions",
-					"type":"Text",
+					"type":"Action",
 					"title":"On Exit Actions",
 					"title_de":"On Exit Actions",
 					"value":"",
@@ -3412,7 +3413,7 @@
 				},
 				{
 					"id":"vardefs",
-					"type":"Text",
+					"type":"Vardef",
 					"title":"Variable Definitions",
 					"title_de":"Variable Definitions",
 					"value":"",
@@ -3498,7 +3499,7 @@
 				},	
 				{
 					"id":"onEntryActions",
-					"type":"Text",
+					"type":"Action",
 					"title":"On Entry Actions",
 					"title_de":"On Entry Actions",
 					"value":"",
@@ -3508,7 +3509,7 @@
 				},
 				{
 					"id":"onExitActions",
-					"type":"Text",
+					"type":"Action",
 					"title":"On Exit Actions",
 					"title_de":"On Exit Actions",
 					"value":"",
@@ -3540,7 +3541,7 @@
 				},
 				{
 					"id":"vardefs",
-					"type":"Text",
+					"type":"Vardef",
 					"title":"Variable Definitions",
 					"title_de":"Variable Definitions",
 					"value":"",
@@ -4948,13 +4949,25 @@
 				},**/
 				{
 					"id":"conditionlanguage",
-					"type":"String",
+					"type":"Choice",
 					"title":"Language",
 					"title_de":"Sprache",
-					"value":"",
-					"description":"",
+					"value":"drools",
+					"description":"Defines the condition language.",
 					"readonly":false,
-					"optional":true
+					"optional":true,
+					"items": [
+						{
+							"id": "c1",
+							"title":"drools",
+							"value":"drools"
+						},
+						{
+							"id": "c2",
+							"title": "mvel",
+							"value": "mvel"
+						}
+					]                                               
 				},
 				{
 					"id":"conditionexpression",
@@ -5459,13 +5472,25 @@
 				},**/
 				{
 					"id":"conditionlanguage",
-					"type":"String",
+					"type":"Choice",
 					"title":"Language",
 					"title_de":"Sprache",
-					"value":"",
-					"description":"",
+					"value":"drools",
+					"description":"Defines the condition language.",
 					"readonly":false,
-					"optional":true
+					"optional":true,
+					"items": [
+						{
+							"id": "c1",
+							"title":"drools",
+							"value":"drools"
+						},
+						{
+							"id": "c2",
+							"title": "mvel",
+							"value": "mvel"
+						}
+					]                                               
 				},
 				{
 					"id":"conditionexpression",
